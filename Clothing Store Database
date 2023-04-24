@@ -1,0 +1,31 @@
+-- Creating a CLothing Store Database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO clothing VALUES (1, "AOT Shirt", 60, 45);
+INSERT INTO clothing VALUES (2, "AOT Hoodie", 80, 55);
+INSERT INTO clothing VALUES (3, "AOT Joggers", 75, 40);
+INSERT INTO clothing VALUES (4, "AOT Socks", 110, 20);
+INSERT INTO clothing VALUES (5, "AOT Cap", 70, 25);
+INSERT INTO clothing VALUES (6, "Mario Hat", 200, 20);
+INSERT INTO clothing VALUES (7, "Luigi Hat", 200, 20);
+INSERT INTO clothing VALUES (8, "Princess Peach Crown", 150, 30);
+INSERT INTO clothing VALUES (9, "Bowser Shirt", 175, 25);
+INSERT INTO clothing VALUES (10, "Toad Shirt", 150, 20);
+INSERT INTO clothing VALUES (11, "Yoshi Socks", 110, 15);
+INSERT INTO clothing VALUES (12, "Koopa Beanies", 120, 18);
+INSERT INTO clothing VALUES (13, "Salior Moon Shirt", 150, 25);
+INSERT INTO clothing VALUES (14, "FMA Shirt", 125, 20);
+INSERT INTO clothing VALUES (15, "Stuido Ghibli Tee", 200, 30);
+
+-- Display the database order by values. 
+SELECT * FROM clothing;
+
+-- What is the order of price from least to most expensive? 
+SELECT * FROM clothing 
+ORDER BY price;
+
+-- Order items based on price, collecting the sum quantity.   
+SELECT price, SUM(quantity) 
+FROM clothing 
+GROUP BY price;
